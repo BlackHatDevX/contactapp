@@ -1,33 +1,39 @@
 # Contacts App
 
-## Tech Stack
+A contact application built with React, TypeScript, and Tailwind CSS.
 
-> VITE, React, TS, Tailwind CSS, Heroicons
+## 🌐 Live Demo
 
-## Routes using (react-router-dom)
+**[View Live App](https://contactapp-pi.vercel.app/)**
+
+## 🛠️ Tech Stack
+
+> VITE, React, TypeScript, Tailwind CSS, React Router DOM
+
+## 🚀 Routes using (react-router-dom)
 
 ```
 <Route path="/" element={<Home />} />
 <Route path="/about" element={<About />} />
 ```
 
-## To run this project locally
+## 📦 To run this project locally
 
-```
+```bash
 git clone https://github.com/BlackHatDevX/contactapp
 cd contactapp
 yarn install
 yarn dev
 ```
 
-## To build app for production
+## 🏗️ To build app for production
 
-```
+```bash
 yarn build
 (app will be available in dist)
 ```
 
-## Project Structure
+## 📁 Project Structure
 
 ```
 .
