@@ -1,5 +1,6 @@
 import React from "react";
 
+// Type for contact
 export type Contact = {
   id: number;
   name: string;
@@ -11,12 +12,16 @@ interface ContactDataRendererProps {
   contacts: Contact[];
 }
 
-const ContactDataRenderer: React.FC<ContactDataRendererProps> = ({ contacts }) => {
+// search logic
+const ContactDataRenderer: React.FC<ContactDataRendererProps> = ({
+  contacts,
+}) => {
   if (contacts.length === 0) {
     return <div className="text-gray-500">No contacts found.</div>;
   }
   return (
     <div className="space-y-4">
+      {/* Render each contact using map */}
       {contacts.map((contact) => (
         <div key={contact.id} className="p-4 border rounded shadow-sm bg-white">
           <div className="font-bold text-lg">{contact.name}</div>
