@@ -3,34 +3,14 @@ import ContactDataRenderer, {
   type Contact,
 } from "../components/ContactDataRenderer";
 
-// sample data for app
-const sampleContacts: Contact[] = [
-  {
-    id: 1,
-    name: "Alice Johnson",
-    email: "alice@example.com",
-    phone: "123-456-7890",
-  },
-  { id: 2, name: "Bob Smith", email: "bob@example.com", phone: "234-567-8901" },
-  {
-    id: 3,
-    name: "Charlie Brown",
-    email: "charlie@example.com",
-    phone: "345-678-9012",
-  },
-  {
-    id: 4,
-    name: "Diana Prince",
-    email: "diana@example.com",
-    phone: "456-789-0123",
-  },
-  { id: 4, name: "David", email: "david@example.com", phone: "233-789-0123" },
-];
+interface HomeProps {
+  contacts: Contact[];
+}
 
-function home() {
-  // State to manage the filter input and contacts
+function Home({ contacts }: HomeProps) {
+  // State to manage the filter input
   const [filter, setFilter] = useState("");
-  const [contacts] = useState<Contact[]>(sampleContacts);
+  
   // using lowercase for case-insensitive search
   const filteredContacts = contacts.filter((contact) => {
     const search = filter.toLowerCase();
@@ -40,6 +20,7 @@ function home() {
       contact.phone.includes(search)
     );
   });
+  
   return (
     <div>
       <div className="max-w-xl mx-auto p-6">
@@ -76,4 +57,4 @@ function home() {
   );
 }
 
-export default home;
+export default Home;
